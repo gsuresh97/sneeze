@@ -17,5 +17,5 @@ To get the location in React Native, use getCurrentPosition() in Geolocation API
 https://facebook.github.io/react-native/docs/geolocation.html
 https://developer.mozilla.org/en-US/docs/Web/API/Coordinates
 
-The MongoDB database for this is stored at /sneeze/db. To start the database, execute mongod --dbpath <PATH_TO_SNEEZE>/db
+The MongoDB database for this is stored at ./db. To start the database, execute mongod --dbpath <PATH_TO_SNEEZE_PROJECT>/db
 
