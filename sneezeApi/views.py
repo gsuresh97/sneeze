@@ -24,7 +24,8 @@ def saveMeme(request):
         	"user": data.user,
         	"time": time()
         }
-        result = col.insert_one(post)
+        result = col.save(post)
+        col.createIndex( {"loc": "2d"} )
 
         return HttpResponse(status=201)
     return HttpResponse(status=501)
