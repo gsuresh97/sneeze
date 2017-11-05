@@ -1,0 +1,21 @@
+Need to install Django, Django Rest Framework, MongoDB, and pymongo
+
+
+MongoDB Schema
+db: db
+	collection: _____
+		[{
+			loc: [long, lat],
+			file_path: "path",
+			user: "user_name",
+			time: time
+
+		}]
+
+To get the location in React Native, use getCurrentPosition() in Geolocation API. This returns a Position object which has a Coordinates member. Use this in your API calls.
+
+https://facebook.github.io/react-native/docs/geolocation.html
+https://developer.mozilla.org/en-US/docs/Web/API/Coordinates
+
+The MongoDB database for this is stored at /sneeze/db. To start the database, execute mongod --dbpath <PATH_TO_SNEEZE>/db
+
