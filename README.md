@@ -17,13 +17,14 @@ db: db
 		}]
 ```
 
-		The MongoDB database for this is stored at ./db. This folder is not included in the git because it takes too much space. To start the database, execute mongod --dbpath <PATH_TO_SNEEZE_PROJECT>/db
+The MongoDB database for this is stored at ./db. This folder is not included in the git because it takes too much space. To start the database, execute mongod --dbpath <PATH_TO_SNEEZE_PROJECT>/db
 
 ## Server Functionality
 
 Sneeze Endpoint:
 * Receives latlong, file identifier, username
 * Assigns time received and stores in db
+
 Image/Text Upload Endpoint:
 * Fields
 	- format (image/text)
@@ -32,6 +33,7 @@ Image/Text Upload Endpoint:
 	- filename is id
 	- id is sequential and prefixed with 'txt_' or 'img_' so we can later determine how to display
 * Returns identifier to listening client if successful, error otherwise
+
 Metadata Endpoint:
 * Receive a request with file_id
 * Return list of latlongs, usernames (maybe?), times
