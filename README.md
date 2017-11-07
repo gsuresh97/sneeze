@@ -5,6 +5,7 @@
  * pymongo
 
 ## MongoDB Schema
+```
 db: db
 	collection: _____
 		[{
@@ -14,6 +15,7 @@ db: db
 			time: time
 
 		}]
+```
 
 		The MongoDB database for this is stored at ./db. This folder is not included in the git because it takes too much space. To start the database, execute mongod --dbpath <PATH_TO_SNEEZE_PROJECT>/db
 
