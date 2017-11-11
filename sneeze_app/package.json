@@ -19,9 +19,13 @@
     "preset": "jest-expo"
   },
   "dependencies": {
+    "create-react-native-app": "^1.0.0",
     "expo": "^22.0.2",
-    "react": "16.0.0-beta.5",
-    "react-native": "^0.49.5"
+    "react": "^16.0.0-beta.5",
+    "react-dom": "^16.1.0",
+    "react-native": "^0.49.5",
+    "react-scripts": "^1.0.17",
+    "watchman": "^0.1.8"
   },
   "description": "This project was bootstrapped with [Create React Native App](https://github.com/react-community/create-react-native-app).",
   "repository": {
