@@ -4,7 +4,8 @@
  * MongoDB
  * pymongo
  * Node/ npm (This will probably install npm5 which is incompatible with react native. To downgrade to npm4, run `npm install -g npm@4` )
- * watchman (`npm install watchman`)
+ 	* watchman (`npm install watchman`)
+ 	* create-react-native-app (`npm install -g create-react-native-app`)
 
 ## MongoDB Schema
 ```
