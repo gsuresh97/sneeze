@@ -3,7 +3,8 @@
  * Django Rest Framework
  * MongoDB
  * pymongo
- * Node 7.10.1 (Don't get the latest node from homebrew, it comes with NPM 5, which is incompatible with react native)
+ * Node/ npm (This will probably install npm5 which is incompatible with react native. To downgrade to npm4, run `npm install -g npm@4` )
+ * watchman (`npm install watchman`)
 
 ## MongoDB Schema
 ```
