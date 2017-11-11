@@ -3,6 +3,7 @@
  * Django Rest Framework
  * MongoDB
  * pymongo
+ * Node 7.10.1 (Don't get the latest node from homebrew, it comes with NPM 5, which is incompatible with react native)
 
 ## MongoDB Schema
 ```
