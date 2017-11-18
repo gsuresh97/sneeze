@@ -13,7 +13,9 @@ export default class Upload extends React.Component {
             <View style={{flex: 1, flexDirection: 'column'}}>
                 <View style={styles.map}>
                     <Image
-                      source={UploadImg}
+                        style={{width: '100%', height: '100%'}}
+                        resizeMode={'contain'}
+                        source={UploadImg}
                     />
                 </View>
                 <View style={styles.title}>
@@ -46,6 +48,7 @@ const styles = StyleSheet.create({
       height: '10%',
       width: '100%',
       backgroundColor: '#ffffff',
+      padding:5,
   },
   button: {
       height: '15%',

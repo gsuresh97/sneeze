@@ -3,35 +3,12 @@ import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import MapView from 'react-native-maps';
 import { Button } from 'react-native-elements';
 import Modal from 'react-native-modal';
-import Upload from './upload';
-import MemeView from './meme-view';
-import ReSneeze from './resneeze';
 
-export default class Home extends React.Component {
-    state = {
-      isModalVisible: false,
-      isMemeViewVisible: false,
-      isReSneezeVisible: false,
-    }
-
-    _showModal = () => this.setState({ isModalVisible: true })
-
-    _hideModal = () => this.setState({ isModalVisible: false })
-
-    _showMeme = () => this.setState({ isMemeViewVisible: true })
-
-    _hideMeme = () => this.setState({ isMemeViewVisible: false })
-
-    _showReSneeze = () => this.setState({ isReSneezeVisible: true })
-
-    _hideReSneeze = () => this.setState({ isReSneezeVisible: false })
+export default class ReSneeze extends React.Component {
 
     render() {
         return (
             <View style={{flex: 1, flexDirection: 'column'}}>
-                <View style={styles.header}>
-                    <Text>Hey</Text>
-                </View>
                 <MapView
                     style={styles.map}
                     scrollEnabled={false}
@@ -48,19 +25,10 @@ export default class Home extends React.Component {
                         icon={{name: 'blur-on', size: 32}}
                         buttonStyle={{backgroundColor: '#4286f4', borderRadius: 0}}
                         textStyle={{textAlign: 'center', fontSize:20, fontFamily:'Roboto', fontWeight:'bold'}}
-                        title={`Sneeze`}
-                        onPress={this._showModal}
+                        title={`ReSneeze`}
+                        onPress={this.props.close}
                     />
                 </View>
-                <Modal isVisible={this.state.isModalVisible}>
-                  <Upload close={this._showMeme} />
-                </Modal>
-                <Modal isVisible={this.state.isMemeViewVisible}>
-                  <MemeView close={()=>{this._hideModal();this._hideMeme();this._hideReSneeze()}} open={this._showReSneeze} />
-                </Modal>
-                <Modal isVisible={this.state.isReSneezeVisible}>
-                  <ReSneeze close={()=>{this._hideModal();this._hideMeme();this._hideReSneeze()}} />
-                </Modal>
             </View>
         );
     }
