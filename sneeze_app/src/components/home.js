@@ -22,6 +22,7 @@ export default class Home extends React.Component {
                 </View>
                 <MapView
                     style={styles.map}
+                    scrollEnabled={false}
                     region={{
                         latitude: 37.78825,
                         longitude: -122.4324,

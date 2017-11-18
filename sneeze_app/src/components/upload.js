@@ -1,8 +1,9 @@
 import React from 'react';
-import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { StyleSheet, Text, TouchableOpacity, TextInput, Image, View } from 'react-native';
 import MapView from 'react-native-maps';
 import { Button } from 'react-native-elements';
 import Modal from 'react-native-modal';
+import UploadImg from '../resources/upload.png'
 
 
 export default class Upload extends React.Component {
@@ -11,13 +12,21 @@ export default class Upload extends React.Component {
         return (
             <View style={{flex: 1, flexDirection: 'column'}}>
                 <View style={styles.map}>
-                    <Text>Hey</Text>
+                    <Image
+                      source={UploadImg}
+                    />
+                </View>
+                <View style={styles.title}>
+                    <TextInput
+                        style={{height: 40}}
+                        placeholder="Title"
+                    />
                 </View>
                 <View style={styles.button}>
                     <Button
                         buttonStyle={{backgroundColor: '#4286f4', borderRadius: 0}}
                         textStyle={{textAlign: 'center', fontSize:20, fontFamily:'Roboto', fontWeight:'bold'}}
-                        title={`Upload`}
+                        title={`Send`}
                         onPress={this.props.close}
                     />
                 </View>
@@ -27,14 +36,16 @@ export default class Upload extends React.Component {
 }
 
 const styles = StyleSheet.create({
-    header: {
-        height: '0%',
-        width: '100%',
-    },
+
   map: {
-      height: '85%',
+      height: '75%',
       width: '100%',
        backgroundColor: '#ffffff',
+  },
+  title: {
+      height: '10%',
+      width: '100%',
+      backgroundColor: '#ffffff',
   },
   button: {
       height: '15%',
