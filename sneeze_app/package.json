@@ -27,6 +27,8 @@
     "react-native-animated-modal": "^1.1.0",
     "react-native-elements": "^0.18.2",
     "react-native-maps": "^0.17.1",
+    "react-native-modal": "^4.1.1",
+    "react-native-photo-upload": "^1.1.1",
     "react-scripts": "^1.0.17",
     "watchman": "^0.1.8"
   },
