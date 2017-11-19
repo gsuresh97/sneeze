@@ -26,6 +26,18 @@ export default class Home extends React.Component {
 
     _hideReSneeze = () => this.setState({ isReSneezeVisible: false })
 
+    pollServer(){
+        ;
+    }
+
+    componentDidMount(){
+        this.timeout = setTimeout(this.pollServer, 1000);
+    }
+
+    componentWillUnmount(){
+        clearTimeout(this.timeout);
+    }
+
     render() {
         return (
             <View style={{flex: 1, flexDirection: 'column'}}>
