@@ -2,5 +2,6 @@ from django.conf.urls import url
 from sneezeApi import views
 
 urlpatterns = [
-	url(r'^save/$', views.saveMeme),
+	url(r'^sneeze/$', views.sneeze),
+	url(r'^getMemes/$', views.getMemes),
 ]
