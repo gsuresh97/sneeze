@@ -57,7 +57,6 @@ export default class Home extends React.Component {
                 </MapView>
                 <View style={styles.button}>
                     <Button
-                        icon={{name: 'blur-on', size: 32}}
                         buttonStyle={{backgroundColor: '#4286f4', borderRadius: 0}}
                         textStyle={{textAlign: 'center', fontSize:20, fontFamily:'Roboto', fontWeight:'bold'}}
                         title={`Sneeze`}
