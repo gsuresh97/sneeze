@@ -128,6 +128,10 @@
         "source": "/Users/family/Documents/Gopi's_Stuff/UCLA/CSM117/sneeze/sneeze_app/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/layout/abc_select_dialog_material.xml"
     },
     {
+        "merged": "/Users/family/Documents/Gopi's_Stuff/UCLA/CSM117/sneeze/sneeze_app/android/app/build/intermediates/res/merged/debug/layout/list_item.xml",
+        "source": "/Users/family/Documents/Gopi's_Stuff/UCLA/CSM117/sneeze/sneeze_app/android/app/build/intermediates/exploded-aar/sneeze_app/react-native-image-picker/unspecified/res/layout/list_item.xml"
+    },
+    {
         "merged": "/Users/family/Documents/Gopi's_Stuff/UCLA/CSM117/sneeze/sneeze_app/android/app/build/intermediates/res/merged/debug/layout/abc_popup_menu_item_layout.xml",
         "source": "/Users/family/Documents/Gopi's_Stuff/UCLA/CSM117/sneeze/sneeze_app/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/layout/abc_popup_menu_item_layout.xml"
     },

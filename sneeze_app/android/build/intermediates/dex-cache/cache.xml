@@ -21,105 +21,6 @@
     </item>
     <item
         is-multidex="false"
-        jar="/Users/family/Documents/Gopi&apos;s_Stuff/UCLA/CSM117/sneeze/sneeze_app/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="d86429b0f0b3f3cafbeb78dda1b9d89119ccb05d">
-        <dex dex="/Users/family/Documents/Gopi&apos;s_Stuff/UCLA/CSM117/sneeze/sneeze_app/android/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-23.0.1_9f29d4bbedaf61d449fe58995e41098419a41727.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/family/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/24.0.0/support-annotations-24.0.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="2943c74db6d4346ab8c6531adac91fa05c137c40">
-        <dex dex="/Users/family/Documents/Gopi&apos;s_Stuff/UCLA/CSM117/sneeze/sneeze_app/android/app/build/intermediates/pre-dexed/debug/support-annotations-24.0.0_318e4b28b39225caabeee8c34699e4a650e21f43.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/family/Documents/Gopi&apos;s_Stuff/UCLA/CSM117/sneeze/sneeze_app/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.49.5/jars/libs/infer-annotations-4.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="9809e90be788acdb479b2b44e2112f3295a03068">
-        <dex dex="/Users/family/Documents/Gopi&apos;s_Stuff/UCLA/CSM117/sneeze/sneeze_app/android/app/build/intermediates/pre-dexed/debug/infer-annotations-4.0_1904b8d29c0692095e62a0a0cf1093ea31b781c9.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/family/.gradle/caches/modules-2/files-2.1/javax.inject/javax.inject/1/6975da39a7040257bd51d21a231b76c915872d38/javax.inject-1.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="6975da39a7040257bd51d21a231b76c915872d38">
-        <dex dex="/Users/family/Documents/Gopi&apos;s_Stuff/UCLA/CSM117/sneeze/sneeze_app/android/app/build/intermediates/pre-dexed/debug/javax.inject-1_03054528afa6a2f125e33822de3dc36819892cf0.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/family/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp/3.6.0/69edde9fc4b01c9fd51d25b83428837478c27254/okhttp-3.6.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="69edde9fc4b01c9fd51d25b83428837478c27254">
-        <dex dex="/Users/family/Documents/Gopi&apos;s_Stuff/UCLA/CSM117/sneeze/sneeze_app/android/app/build/intermediates/pre-dexed/debug/okhttp-3.6.0_81bd027b00d76d29bd926da84cef5627fd7a06ee.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/family/Documents/Gopi&apos;s_Stuff/UCLA/CSM117/sneeze/sneeze_app/android/app/build/intermediates/exploded-aar/com.facebook.fresco/drawee/1.3.0/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="c65a2e39d54023bac3aef64a2f0cff89289c7ff6">
-        <dex dex="/Users/family/Documents/Gopi&apos;s_Stuff/UCLA/CSM117/sneeze/sneeze_app/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-drawee-1.3.0_e50d7ea4cbe16e39675b27bc06b75a0a3c55c046.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/family/Documents/Gopi&apos;s_Stuff/UCLA/CSM117/sneeze/sneeze_app/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/10.2.4/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="9ed08fab37c3a572da1d9ed2bf2e36c8d3e2bc48">
-        <dex dex="/Users/family/Documents/Gopi&apos;s_Stuff/UCLA/CSM117/sneeze/sneeze_app/android/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-basement-10.2.4_a9b21ae7caaadd7aef549f8109eabf94a73c11a2.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/family/Documents/Gopi&apos;s_Stuff/UCLA/CSM117/sneeze/sneeze_app/android/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="2f7e6e2dad1bccaf68a8820820adc6c0d5b96d37">
-        <dex dex="/Users/family/Documents/Gopi&apos;s_Stuff/UCLA/CSM117/sneeze/sneeze_app/android/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-24.0.0_c54013cfa123ff804260f12aa5476e3459fd6fe8.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/family/.gradle/caches/modules-2/files-2.1/com.google.code.findbugs/jsr305/3.0.0/5871fb60dc68d67da54a663c3fd636a10a532948/jsr305-3.0.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="5871fb60dc68d67da54a663c3fd636a10a532948">
-        <dex dex="/Users/family/Documents/Gopi&apos;s_Stuff/UCLA/CSM117/sneeze/sneeze_app/android/app/build/intermediates/pre-dexed/debug/jsr305-3.0.0_5eb4f50ddbec2bbd5c227c79471dd8d9dfe1fc63.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/family/Documents/Gopi&apos;s_Stuff/UCLA/CSM117/sneeze/sneeze_app/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline-base/1.3.0/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="72128af126ddd7d6252da9357fe560d3abcdfb0c">
-        <dex dex="/Users/family/Documents/Gopi&apos;s_Stuff/UCLA/CSM117/sneeze/sneeze_app/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-imagepipeline-base-1.3.0_bdaf5f917bc5e5f6d5ac0551847f87c3982d7935.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/family/Documents/Gopi&apos;s_Stuff/UCLA/CSM117/sneeze/sneeze_app/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/10.2.4/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="dd1d0d84da2cff18f741c63a9c3af7d9aa89fdd6">
-        <dex dex="/Users/family/Documents/Gopi&apos;s_Stuff/UCLA/CSM117/sneeze/sneeze_app/android/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-base-10.2.4_d70543b39f7242909117d468e3654e68568bbc94.jar" />
-    </item>
-    <item
-        is-multidex="false"
         jar="/Users/family/Documents/Gopi&apos;s_Stuff/UCLA/CSM117/sneeze/sneeze_app/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.49.5/jars/classes.jar"
         jumboMode="false"
         optimize="true"
@@ -135,6 +36,15 @@
         revision="23.0.1"
         sha1="d85884acf6810a3bbbecb587f239005cbc846dc4">
         <dex dex="/Users/family/Documents/Gopi&apos;s_Stuff/UCLA/CSM117/sneeze/sneeze_app/android/app/build/intermediates/pre-dexed/debug/bolts-tasks-1.4.0_d7b24c6a48ab3d0851644a278ae4f10871fc93b4.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/family/Documents/Gopi&apos;s_Stuff/UCLA/CSM117/sneeze/sneeze_app/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="d86429b0f0b3f3cafbeb78dda1b9d89119ccb05d">
+        <dex dex="/Users/family/Documents/Gopi&apos;s_Stuff/UCLA/CSM117/sneeze/sneeze_app/android/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-23.0.1_9f29d4bbedaf61d449fe58995e41098419a41727.jar" />
     </item>
     <item
         is-multidex="false"
@@ -174,6 +84,15 @@
     </item>
     <item
         is-multidex="false"
+        jar="/Users/family/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/24.0.0/support-annotations-24.0.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="2943c74db6d4346ab8c6531adac91fa05c137c40">
+        <dex dex="/Users/family/Documents/Gopi&apos;s_Stuff/UCLA/CSM117/sneeze/sneeze_app/android/app/build/intermediates/pre-dexed/debug/support-annotations-24.0.0_318e4b28b39225caabeee8c34699e4a650e21f43.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="/Users/family/Documents/Gopi&apos;s_Stuff/UCLA/CSM117/sneeze/sneeze_app/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/10.2.4/jars/classes.jar"
         jumboMode="false"
         optimize="true"
@@ -192,6 +111,15 @@
     </item>
     <item
         is-multidex="false"
+        jar="/Users/family/Documents/Gopi&apos;s_Stuff/UCLA/CSM117/sneeze/sneeze_app/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.49.5/jars/libs/infer-annotations-4.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="9809e90be788acdb479b2b44e2112f3295a03068">
+        <dex dex="/Users/family/Documents/Gopi&apos;s_Stuff/UCLA/CSM117/sneeze/sneeze_app/android/app/build/intermediates/pre-dexed/debug/infer-annotations-4.0_1904b8d29c0692095e62a0a0cf1093ea31b781c9.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="/Users/family/Documents/Gopi&apos;s_Stuff/UCLA/CSM117/sneeze/sneeze_app/android/app/build/intermediates/exploded-aar/com.facebook.fresco/fresco/1.3.0/jars/classes.jar"
         jumboMode="false"
         optimize="true"
@@ -201,12 +129,57 @@
     </item>
     <item
         is-multidex="false"
+        jar="/Users/family/Documents/Gopi&apos;s_Stuff/UCLA/CSM117/sneeze/sneeze_app/android/app/build/intermediates/exploded-aar/sneeze_app/react-native-image-resizer/unspecified/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="fcd9b79873252a4450979e54e700ff80366da57d">
+        <dex dex="/Users/family/Documents/Gopi&apos;s_Stuff/UCLA/CSM117/sneeze/sneeze_app/android/app/build/intermediates/pre-dexed/debug/sneeze_app-react-native-image-resizer-unspecified_005cd449e9fcbd24bb82a1360075bdf5d325519c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/family/.gradle/caches/modules-2/files-2.1/javax.inject/javax.inject/1/6975da39a7040257bd51d21a231b76c915872d38/javax.inject-1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="6975da39a7040257bd51d21a231b76c915872d38">
+        <dex dex="/Users/family/Documents/Gopi&apos;s_Stuff/UCLA/CSM117/sneeze/sneeze_app/android/app/build/intermediates/pre-dexed/debug/javax.inject-1_03054528afa6a2f125e33822de3dc36819892cf0.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="/Users/family/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.13.0/a9283170b7305c8d92d25aff02a6ab7e45d06cbe/okio-1.13.0.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.1"
         sha1="a9283170b7305c8d92d25aff02a6ab7e45d06cbe">
         <dex dex="/Users/family/Documents/Gopi&apos;s_Stuff/UCLA/CSM117/sneeze/sneeze_app/android/app/build/intermediates/pre-dexed/debug/okio-1.13.0_b4a1966c4dd7568e2fb737d88f13cd237eb824c2.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/family/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp/3.6.0/69edde9fc4b01c9fd51d25b83428837478c27254/okhttp-3.6.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="69edde9fc4b01c9fd51d25b83428837478c27254">
+        <dex dex="/Users/family/Documents/Gopi&apos;s_Stuff/UCLA/CSM117/sneeze/sneeze_app/android/app/build/intermediates/pre-dexed/debug/okhttp-3.6.0_81bd027b00d76d29bd926da84cef5627fd7a06ee.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/family/Documents/Gopi&apos;s_Stuff/UCLA/CSM117/sneeze/sneeze_app/android/app/build/intermediates/exploded-aar/com.facebook.fresco/drawee/1.3.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="c65a2e39d54023bac3aef64a2f0cff89289c7ff6">
+        <dex dex="/Users/family/Documents/Gopi&apos;s_Stuff/UCLA/CSM117/sneeze/sneeze_app/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-drawee-1.3.0_e50d7ea4cbe16e39675b27bc06b75a0a3c55c046.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/family/Documents/Gopi&apos;s_Stuff/UCLA/CSM117/sneeze/sneeze_app/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/10.2.4/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="9ed08fab37c3a572da1d9ed2bf2e36c8d3e2bc48">
+        <dex dex="/Users/family/Documents/Gopi&apos;s_Stuff/UCLA/CSM117/sneeze/sneeze_app/android/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-basement-10.2.4_a9b21ae7caaadd7aef549f8109eabf94a73c11a2.jar" />
     </item>
     <item
         is-multidex="false"
@@ -228,12 +201,66 @@
     </item>
     <item
         is-multidex="false"
+        jar="/Users/family/Documents/Gopi&apos;s_Stuff/UCLA/CSM117/sneeze/sneeze_app/android/app/build/intermediates/exploded-aar/sneeze_app/react-native-fs/unspecified/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="828b5de76484810632d4e2310b40c4e0f080347d">
+        <dex dex="/Users/family/Documents/Gopi&apos;s_Stuff/UCLA/CSM117/sneeze/sneeze_app/android/app/build/intermediates/pre-dexed/debug/sneeze_app-react-native-fs-unspecified_8d04c3067d54405f7a135199e27710b4a397374e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/family/Documents/Gopi&apos;s_Stuff/UCLA/CSM117/sneeze/sneeze_app/android/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="2f7e6e2dad1bccaf68a8820820adc6c0d5b96d37">
+        <dex dex="/Users/family/Documents/Gopi&apos;s_Stuff/UCLA/CSM117/sneeze/sneeze_app/android/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-24.0.0_c54013cfa123ff804260f12aa5476e3459fd6fe8.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/family/Documents/Gopi&apos;s_Stuff/UCLA/CSM117/sneeze/sneeze_app/android/app/build/intermediates/exploded-aar/sneeze_app/react-native-image-picker/unspecified/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="c87819e7d2c310653e0f2dac3831c034f54b794a">
+        <dex dex="/Users/family/Documents/Gopi&apos;s_Stuff/UCLA/CSM117/sneeze/sneeze_app/android/app/build/intermediates/pre-dexed/debug/sneeze_app-react-native-image-picker-unspecified_b36b30e2b5ec0de135b2d81512620e59ec282dec.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="/Users/family/Documents/Gopi&apos;s_Stuff/UCLA/CSM117/sneeze/sneeze_app/android/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0/jars/libs/internal_impl-24.0.0.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.1"
         sha1="fcaf463e10e69c1923ccf1edeba3b4196d239e00">
         <dex dex="/Users/family/Documents/Gopi&apos;s_Stuff/UCLA/CSM117/sneeze/sneeze_app/android/app/build/intermediates/pre-dexed/debug/internal_impl-24.0.0_6e655484b8b981bc074dcb591ae6aa5cf510fa8e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/family/.gradle/caches/modules-2/files-2.1/com.google.code.findbugs/jsr305/3.0.0/5871fb60dc68d67da54a663c3fd636a10a532948/jsr305-3.0.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="5871fb60dc68d67da54a663c3fd636a10a532948">
+        <dex dex="/Users/family/Documents/Gopi&apos;s_Stuff/UCLA/CSM117/sneeze/sneeze_app/android/app/build/intermediates/pre-dexed/debug/jsr305-3.0.0_5eb4f50ddbec2bbd5c227c79471dd8d9dfe1fc63.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/family/Documents/Gopi&apos;s_Stuff/UCLA/CSM117/sneeze/sneeze_app/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline-base/1.3.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="72128af126ddd7d6252da9357fe560d3abcdfb0c">
+        <dex dex="/Users/family/Documents/Gopi&apos;s_Stuff/UCLA/CSM117/sneeze/sneeze_app/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-imagepipeline-base-1.3.0_bdaf5f917bc5e5f6d5ac0551847f87c3982d7935.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/family/Documents/Gopi&apos;s_Stuff/UCLA/CSM117/sneeze/sneeze_app/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/10.2.4/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="dd1d0d84da2cff18f741c63a9c3af7d9aa89fdd6">
+        <dex dex="/Users/family/Documents/Gopi&apos;s_Stuff/UCLA/CSM117/sneeze/sneeze_app/android/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-base-10.2.4_d70543b39f7242909117d468e3654e68568bbc94.jar" />
     </item>
     <item
         is-multidex="false"

@@ -59,6 +59,10 @@ export default class Home extends React.Component {
         clearTimeout(this.timeout);
     }
 
+    sendImage(){
+      ;
+    }
+
     render() {
         return (
             <View style={{flex: 1, flexDirection: 'column'}}>
@@ -87,6 +91,7 @@ export default class Home extends React.Component {
                         textStyle={{textAlign: 'center', fontSize:20, fontFamily:'Roboto', fontWeight:'bold'}}
                         title={`Sneeze`}
                         onPress={this._showModal}
+                        showsUserLocation={true}
                     />
                 </View>
                 <Modal isVisible={this.state.isModalVisible}>
