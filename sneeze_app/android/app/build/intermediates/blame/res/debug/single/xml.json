@@ -1,5 +1,9 @@
 [
     {
+        "merged": "/Users/family/Documents/Gopi's_Stuff/UCLA/CSM117/sneeze/sneeze_app/android/app/build/intermediates/res/merged/debug/xml/provider_paths.xml",
+        "source": "/Users/family/Documents/Gopi's_Stuff/UCLA/CSM117/sneeze/sneeze_app/android/app/build/intermediates/exploded-aar/sneeze_app/react-native-image-picker/unspecified/res/xml/provider_paths.xml"
+    },
+    {
         "merged": "/Users/family/Documents/Gopi's_Stuff/UCLA/CSM117/sneeze/sneeze_app/android/app/build/intermediates/res/merged/debug/xml/preferences.xml",
         "source": "/Users/family/Documents/Gopi's_Stuff/UCLA/CSM117/sneeze/sneeze_app/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.49.5/res/xml/preferences.xml"
     }

@@ -3,20 +3,43 @@ import { StyleSheet, Text, TouchableOpacity, TextInput, Image, View } from 'reac
 import MapView from 'react-native-maps';
 import { Button } from 'react-native-elements';
 import Modal from 'react-native-modal';
-import UploadImg from '../resources/upload.png'
+import UploadImg from '../resources/upload.png';
+import PhotoUpload from 'react-native-photo-upload';
 
 
 export default class Upload extends React.Component {
+    var image = "";
 
+    send(){
+      
+        
+
+    }
     render() {
         return (
             <View style={{flex: 1, flexDirection: 'column'}}>
                 <View style={styles.map}>
-                    <Image
-                        style={{width: '100%', height: '100%'}}
-                        resizeMode={'contain'}
-                        source={UploadImg}
-                    />
+                    
+                    <PhotoUpload
+                      onPhotoSelect={avatar => {
+                        if (avatar) {
+                          this.image  = avatar;
+                        }
+                      }}
+                    >
+                     <Image
+                       style={{
+                         paddingVertical: 30,
+                         width: 400,
+                         height: 400,
+                       }}
+
+                       resizeMode='contain'
+                       source={{
+                         uri: 'https://www.sparklabs.com/forum/styles/comboot/theme/images/default_avatar.jpg'
+                       }}
+                     />
+                   </PhotoUpload>
                 </View>
                 <View style={styles.title}>
                     <TextInput
@@ -29,7 +52,7 @@ export default class Upload extends React.Component {
                         buttonStyle={{backgroundColor: '#4286f4', borderRadius: 0}}
                         textStyle={{textAlign: 'center', fontSize:20, fontFamily:'Roboto', fontWeight:'bold'}}
                         title={`Send`}
-                        onPress={this.props.close}
+                        onPress={this.send}
                     />
                 </View>
             </View>
