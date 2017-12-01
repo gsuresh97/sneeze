@@ -35,13 +35,33 @@ def sneeze(request):
             # from the POST request? we might need to do additional
             # parsing
             "loc": [data.longitude, data.latitude],
-            "path": os.path.join(os.getcwd(), "img"), #add hash of filename to path
+            "mid": data.mid, #add hash of filename to path
             "user": data.user,
             "time": time()
         }
         result = col.save(post)
         col.createIndex( {"loc": "2d"} )
         return HttpResponse(status=201)
+    return HttpResponse(status=501)
+
+@api_view(['POST'])
+def uploadMeme(request):
+    if request.method == 'POST':
+        data = request.data
+        if 'meme' in data and 'fmt' in data:
+            meme = data['meme']
+            fmt = data['fmt']
+            # ... assign sequential meme id as mid ... #
+            if fmt == 'image':
+                filename = mid + ".jpg"
+            if fmt == 'text':
+                filename = mid + ".txt"
+            # ... save meme as ./memes/filename ... #
+
+            # return mid to caller
+            res = {"mid": mid,}
+            return JsonResponse(res)
+        return HttpResponse(status=400)
     return HttpResponse(status=501)
 
 @api_view(['POST'])
