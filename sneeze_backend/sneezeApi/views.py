@@ -8,6 +8,7 @@ from bson.son import SON
 from bson import BSON
 from bson.binary import Binary
 import uuid
+import os
 
 
 # Create your views here.
@@ -37,20 +38,24 @@ def sneeze(request):
         col.create_index( [("loc", GEO2D)] )
 
         # p = BSON.encode({"picture": data["data"].read()})
+        name = uuid.uuid4(data["data"])
+        f = open(name, "rw+")
+        f.write(data["data"])
+        f.close()
         post = {
             # is this the correct format for accessing attributes
             # from the POST request? we might need to do additional
             # parsing
             "loc": [float(data["longitude"]), float(data["latitude"])],
             "format": data["format"],
-            "data": data["data"].read().decode(encoding='UTF-8'), # https://docs.mongodb.com/manual/reference/bson-types/
+            "path": name, # https://docs.mongodb.com/manual/reference/bson-types/
             "user": data["user"],
             "radius": float(data["rad"]),
             "time": time(),
             "ids": []
         }
         # import pdb; pdb.set_trace()
-        
+
         result = col.insert(post)
 
         return HttpResponse(status=201)
@@ -67,11 +72,12 @@ def getMemes(request):
             if data["id"] not in m["ids"]:
                 pic = m
                 break
-        
+        name = m["path"]
+        f = open(name, "r")
         res = {
             "latitude": pic["loc"][1],
             "longitude": pic["loc"][0],
-            "data": BSON.decode(pic["data"])["picture"]
+            "data": f.read()
 
         }
         return JsonResponse(res)
