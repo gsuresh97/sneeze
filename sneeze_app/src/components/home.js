@@ -53,6 +53,7 @@ export default class Home extends React.Component {
                 latitude: this.state.latitude,
                 longitude: this.state.longitutde,
             })
+          })
         .then(response => response.json())
         .then(responseJson => {
           if(responseJson.newImage){
@@ -106,7 +107,7 @@ export default class Home extends React.Component {
                         longitudeDelta: 0.0121,
                     }}
                 >
-                <MapView.Marker coordinate={{latitude:this.state.latitude,longitude:this.state.longitude}}>
+                <MapView.Marker coordinate={{latitude:this.state.latitude,longitude:this.state.longitude}}/>
                 </MapView>
                 <View style={styles.button}>
                     <Button

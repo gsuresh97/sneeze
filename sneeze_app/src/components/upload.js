@@ -23,6 +23,7 @@ export default class Upload extends React.Component {
                 longitude: this.props.longitutde,
                 data: this.image,
             })
+          })
     }
     render() {
         return (

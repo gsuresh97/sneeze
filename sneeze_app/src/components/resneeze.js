@@ -18,6 +18,7 @@ export default class ReSneeze extends React.Component {
                 longitude: this.props.longitutde,
                 data: this.image,
             })
+        })
     }
     render() {
         return (
@@ -32,7 +33,7 @@ export default class ReSneeze extends React.Component {
                         longitudeDelta: 0.0121,
                     }}
                 >
-                <MapView.Marker coordinate={{latitude:this.props.latitude,longitude:this.props.longitude}}>
+                <MapView.Marker coordinate={{latitude:this.props.latitude,longitude:this.props.longitude}}/>
                 </MapView>
                 <View style={styles.button}>
                     <Button

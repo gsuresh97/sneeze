@@ -35,6 +35,10 @@ ADDED from /Users/family/Documents/Gopi's_Stuff/UCLA/CSM117/sneeze/sneeze_app/an
 MERGED from [sneeze_app:react-native-fs:unspecified] /Users/family/Documents/Gopi's_Stuff/UCLA/CSM117/sneeze/sneeze_app/android/app/build/intermediates/exploded-aar/sneeze_app/react-native-fs/unspecified/AndroidManifest.xml:11:5-81
 	android:name
 		ADDED from /Users/family/Documents/Gopi's_Stuff/UCLA/CSM117/sneeze/sneeze_app/android/app/src/main/AndroidManifest.xml:9:22-78
+uses-permission#android.permission.ACCESS_FINE_LOCATION
+ADDED from /Users/family/Documents/Gopi's_Stuff/UCLA/CSM117/sneeze/sneeze_app/android/app/src/main/AndroidManifest.xml:10:5-79
+	android:name
+		ADDED from /Users/family/Documents/Gopi's_Stuff/UCLA/CSM117/sneeze/sneeze_app/android/app/src/main/AndroidManifest.xml:10:22-76
 uses-sdk
 ADDED from /Users/family/Documents/Gopi's_Stuff/UCLA/CSM117/sneeze/sneeze_app/android/app/src/main/AndroidManifest.xml:11:5-13:41
 MERGED from [sneeze_app:react-native-image-resizer:unspecified] /Users/family/Documents/Gopi's_Stuff/UCLA/CSM117/sneeze/sneeze_app/android/app/build/intermediates/exploded-aar/sneeze_app/react-native-image-resizer/unspecified/AndroidManifest.xml:7:5-9:41

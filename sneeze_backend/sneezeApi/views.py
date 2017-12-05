@@ -4,6 +4,7 @@ from rest_framework.decorators import api_view
 from pymongo import MongoClient, GEO2D
 import os
 from time import time
+from bson.son import SON
 
 
 # Create your views here.
@@ -34,14 +35,15 @@ def sneeze(request):
             # is this the correct format for accessing attributes
             # from the POST request? we might need to do additional
             # parsing
-            "loc": [data.longitude, data.latitude],
-            "format": data.format,
-            "data": data.data, # https://docs.mongodb.com/manual/reference/bson-types/
-            "user": data.user,
+            "loc": [float(data["longitude"]), float(data["latitude"])],
+            "format": data["format"],
+            "data": data["data"], # https://docs.mongodb.com/manual/reference/bson-types/
+            "user": data["user"],
+            "radius": data["rad"],
             "time": time()
         }
-        result = col.save(post)
-        col.createIndex( {"loc": "2d"} )
+        result = col.insert(post)
+        col.create_index( {"loc": "2d"} )
         return HttpResponse(status=201)
     return HttpResponse(status=501)
 
@@ -49,15 +51,20 @@ def sneeze(request):
 def getMemes(request):
     if request.method == 'POST':
         data = request.data
+        import pdb; pdb.set_trace()
         client = MongoClient('localhost', 27017)
         db = client.memes
         col = db.info
-        res = db.runCommand(
-            {
-                "geoNear": "col",
-                "near": [data.longitude, data.latitude],
-                "spherical": true
-            }
-        )
+        query = {
+            "loc": SON([("$near", [float(data["longitude"]), float(data["latitude"])]),
+             ("$maxDistance", 10000000)])
+        }
+        meme = db.places.find(query).limit(1)[0]
+        res = {
+            "latitude": meme["latitude"],
+            "longitude": meme["longitude"],
+            "data": meme["data"]
+
+        }
         return JsonResponse(res)
     return HttpResponse(status=501)
