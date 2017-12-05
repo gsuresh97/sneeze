@@ -8,7 +8,11 @@ import PhotoUpload from 'react-native-photo-upload';
 
 
 export default class Upload extends React.Component {
-    var image = "";
+    constructor(props) {
+        super(props);
+        this.state = {
+            image: "",
+        }
 
     send(){
         fetch("this.pollEndpoint",{
@@ -21,7 +25,7 @@ export default class Upload extends React.Component {
                 id: this.props.id,
                 latitude: this.props.latitude,
                 longitude: this.props.longitutde,
-                data: this.image,
+                data: this.state.image,
             })
           })
     }
@@ -33,7 +37,7 @@ export default class Upload extends React.Component {
                     <PhotoUpload
                       onPhotoSelect={avatar => {
                         if (avatar) {
-                          this.image  = avatar;
+                          this.setState({image: avatar});
                         }
                       }}
                     >
