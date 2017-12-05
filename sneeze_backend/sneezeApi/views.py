@@ -6,7 +6,8 @@ import os
 from time import time
 from bson.son import SON
 from bson import BSON
-from bson.codec_options import CodecOptions
+from bson.binary import Binary
+import uuid
 
 
 # Create your views here.
@@ -35,14 +36,14 @@ def sneeze(request):
         data = request.data
         col.create_index( [("loc", GEO2D)] )
 
-
+        # p = BSON.encode({"picture": data["data"].read()})
         post = {
             # is this the correct format for accessing attributes
             # from the POST request? we might need to do additional
             # parsing
             "loc": [float(data["longitude"]), float(data["latitude"])],
             "format": data["format"],
-            "data": BSON.encode({"picture" :data["data"].read()}), # https://docs.mongodb.com/manual/reference/bson-types/
+            "data": data["data"].read().decode(encoding='UTF-8'), # https://docs.mongodb.com/manual/reference/bson-types/
             "user": data["user"],
             "radius": float(data["rad"]),
             "time": time(),
@@ -66,11 +67,11 @@ def getMemes(request):
             if data["id"] not in m["ids"]:
                 pic = m
                 break
-        options = CodecOptions(document_class=collections.OrderedDict)
+        
         res = {
             "latitude": pic["loc"][1],
             "longitude": pic["loc"][0],
-            "data": BSON.decode(pic["data"], codec_options=options)["picture"]
+            "data": BSON.decode(pic["data"])["picture"]
 
         }
         return JsonResponse(res)
