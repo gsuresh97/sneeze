@@ -100,12 +100,13 @@ export default class Home extends React.Component {
                     style={styles.map}
                     scrollEnabled={false}
                     region={{
-                        latitude: 37.78825,
-                        longitude: -122.4324,
+                        latitude: this.state.latitude,
+                        longitude: this.state.longitude,
                         latitudeDelta: 0.115,
                         longitudeDelta: 0.0121,
                     }}
                 >
+                <MapView.Marker coordinate={{latitude:this.state.latitude,longitude:this.state.longitude}}>
                 </MapView>
                 <View style={styles.button}>
                     <Button
