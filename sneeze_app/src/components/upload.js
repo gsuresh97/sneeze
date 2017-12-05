@@ -11,15 +11,24 @@ export default class Upload extends React.Component {
     var image = "";
 
     send(){
-      
-        
-
+        fetch("this.pollEndpoint",{
+            method: "POST",
+            headers: {
+                Accept: "application/json",
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                id: this.props.id,
+                latitude: this.props.latitude,
+                longitude: this.props.longitutde,
+                data: this.image,
+            })
     }
     render() {
         return (
             <View style={{flex: 1, flexDirection: 'column'}}>
                 <View style={styles.map}>
-                    
+
                     <PhotoUpload
                       onPhotoSelect={avatar => {
                         if (avatar) {
@@ -52,7 +61,7 @@ export default class Upload extends React.Component {
                         buttonStyle={{backgroundColor: '#4286f4', borderRadius: 0}}
                         textStyle={{textAlign: 'center', fontSize:20, fontFamily:'Roboto', fontWeight:'bold'}}
                         title={`Send`}
-                        onPress={this.send}
+                        onPress={()=>{this.send();this.props.close()}}
                     />
                 </View>
             </View>

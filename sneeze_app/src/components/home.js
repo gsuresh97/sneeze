@@ -6,6 +6,7 @@ import Modal from 'react-native-modal';
 import Upload from './upload';
 import MemeView from './meme-view';
 import ReSneeze from './resneeze';
+import uuid from 'react-native-uuid';
 
 
 export default class Home extends React.Component {
@@ -13,9 +14,13 @@ export default class Home extends React.Component {
         super(props);
 
         this.state = {
+            id: uuid.v1(),
             latitude: null,
             longitude: null,
             error: null,
+            receivedMeme: null,
+            receivedLat: 0,
+            receivedLon: 0,
         };
     }
     state = {
@@ -37,7 +42,28 @@ export default class Home extends React.Component {
     _hideReSneeze = () => this.setState({ isReSneezeVisible: false })
 
     pollServer(){
-        ;
+        fetch(this.pollEndpoint,{
+            method: "POST",
+            headers: {
+                Accept: "application/json",
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                id: this.state.id,
+                latitude: this.state.latitude,
+                longitude: this.state.longitutde,
+            })
+        .then(response => response.json())
+        .then(responseJson => {
+          if(responseJson.newImage){
+              this.setState({
+                  receivedMeme: responseJson.data,
+                  receivedLat: responseJson.latitude,
+                  receivedLon: responseJson.longitutde
+              })
+              this._showMeme();
+          }
+        });
     }
 
 
@@ -57,10 +83,6 @@ export default class Home extends React.Component {
 
     componentWillUnmount(){
         clearTimeout(this.timeout);
-    }
-
-    sendImage(){
-      ;
     }
 
     render() {
@@ -95,13 +117,13 @@ export default class Home extends React.Component {
                     />
                 </View>
                 <Modal isVisible={this.state.isModalVisible}>
-                  <Upload close={this._showMeme} />
+                  <Upload id={this.state.id} lat={this.state.latitude} lon={this.state.longitude} close={this._hideModal} />
                 </Modal>
                 <Modal isVisible={this.state.isMemeViewVisible}>
-                  <MemeView close={()=>{this._hideModal();this._hideMeme();this._hideReSneeze()}} open={this._showReSneeze} />
+                  <MemeView img={this.state.receivedMeme} close={()=>{this._hideModal();this._hideMeme();this._hideReSneeze()}} open={()=>this._hideMeme();this._showReSneeze();} />
                 </Modal>
                 <Modal isVisible={this.state.isReSneezeVisible}>
-                  <ReSneeze close={()=>{this._hideModal();this._hideMeme();this._hideReSneeze()}} />
+                  <ReSneeze img={this.state.receivedMeme} lat={this.state.receivedLat} lon={this.state.receivedLon} this.close={()=>{this._hideModal();this._hideMeme();this._hideReSneeze()}} />
                 </Modal>
             </View>
         );
@@ -126,4 +148,3 @@ const styles = StyleSheet.create({
       backgroundColor: '#4286f4',
   },
 });
-

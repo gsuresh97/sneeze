@@ -26,6 +26,7 @@
     "react-native-maps": "^0.17.1",
     "react-native-modal": "^4.1.1",
     "react-native-photo-upload": "^1.1.1",
+    "react-native-uuid": "^1.4.9",
     "react-native-vector-icons": "^4.4.2",
     "react-scripts": "^1.0.17",
     "watchman": "^0.1.8"

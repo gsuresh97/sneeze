@@ -5,7 +5,20 @@ import { Button } from 'react-native-elements';
 import Modal from 'react-native-modal';
 
 export default class ReSneeze extends React.Component {
-
+    send(){
+        fetch("this.pollEndpoint",{
+            method: "POST",
+            headers: {
+                Accept: "application/json",
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                id: this.props.id,
+                latitude: this.props.latitude,
+                longitude: this.props.longitutde,
+                data: this.image,
+            })
+    }
     render() {
         return (
             <View style={{flex: 1, flexDirection: 'column'}}>
@@ -13,8 +26,8 @@ export default class ReSneeze extends React.Component {
                     style={styles.map}
                     scrollEnabled={false}
                     region={{
-                        latitude: 37.78825,
-                        longitude: -122.4324,
+                        latitude: this.props.lat,
+                        longitude: this.props.lon,
                         latitudeDelta: 0.115,
                         longitudeDelta: 0.0121,
                     }}
@@ -26,7 +39,7 @@ export default class ReSneeze extends React.Component {
                         buttonStyle={{backgroundColor: '#4286f4', borderRadius: 0}}
                         textStyle={{textAlign: 'center', fontSize:20, fontFamily:'Roboto', fontWeight:'bold'}}
                         title={`ReSneeze`}
-                        onPress={this.props.close}
+                        onPress={()=>{this.send();this.props.close();}}
                     />
                 </View>
             </View>
