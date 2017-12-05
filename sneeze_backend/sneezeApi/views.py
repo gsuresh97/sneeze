@@ -34,30 +34,33 @@ import os
 client = MongoClient('localhost', 27017)
 db = client.memes
 col = db.info
+ids = {}
 @api_view(['POST'])
 def sneeze(request):
     if request.method == 'POST':
+        # import pdb; pdb.set_trace()
         # data = request.data
         col.create_index( [("loc", GEO2D)] )
 
         # p = BSON.encode({"picture": data["data"].read()})
         name = str(uuid.uuid4())
 
-        path = default_storage.save(name, ContentFile(request.FILES['data'].read()))
+        path = default_storage.save(name, ContentFile(request.data['data']))
         tmp_file = os.path.join(settings.MEDIA_ROOT, path)
 
         post = {
             # is this the correct format for accessing attributes
             # from the POST request? we might need to do additional
             # parsing
-            "loc": [float(request.POST.get("longitude")), float(request.POST.get("latitude"))],
-            "format": request.POST.get("format"),
+            "loc": [float(request.data["longitude"]), float(request.data["latitude"])],
+            "format": request.data["format"],
             "path": name, # https://docs.mongodb.com/manual/reference/bson-types/
-            "user": request.POST.get("user"),
-            "radius": float(request.POST.get("rad")),
+            "user": request.data["user"],
+            "radius": float(request.data["radius"]),
             "time": time(),
             "ids": []
         }
+
         # import pdb; pdb.set_trace()
 
         result = col.insert(post)
@@ -72,19 +75,52 @@ def getMemes(request):
         query = {"loc": {"$within": {"$center": [[float(data["longitude"]), float(data["latitude"])], 1000]}}}
         print col.find(query).count()
         pic = None
-        ids = []
-        for m in col.find(query):
-            if data["id"] not in m["ids"]:
-                pic = m
-                ids.append(pic["path"])
-        name = m["path"]
-        f = open(name, "r")
-        res = {
-            "latitude": pic["loc"][1],
-            "longitude": pic["loc"][0],
-            "ids": ids
+        # ids = []
+        present = False
 
-        }
+        for m in col.find(query):
+            # import pdb; pdb.set_trace()
+            try:
+                ids[m["path"]]
+            except:
+                ids[m["path"]] = []
+            # import pdb; pdb.set_trace()
+            if data["id"] not in ids[m["path"]]:
+                pic = m
+                ids[m["path"]].append(data["id"])
+                present = True
+                break
+                # ids.append(pic["path"])
+        if present:
+            id = pic.get("_id")
+            # col.update_one({
+            # "_id": id
+            # },
+            # {
+            #     '$set': {
+            #         'ids': pic["ids"].append(data["id"])
+            #
+            #     }
+            # }, upsert = False)
+            name = m["path"]
+            f = open(name, "r")
+            res = {
+                "latitude": pic["loc"][1],
+                "longitude": pic["loc"][0],
+                # "ids": ids
+                "newImage": present,
+                "data": f.read()
+
+            }
+        else :
+            res = {
+                "latitude": None,
+                "longitude": None,
+                # "ids": ids
+                "newImage": present,
+                "data": None
+
+            }
         return JsonResponse(res)
     return HttpResponse(status=501)
 
