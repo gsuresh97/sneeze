@@ -2,6 +2,8 @@ from django.shortcuts import render
 from django.http import HttpResponse, JsonResponse
 from rest_framework.decorators import api_view
 from pymongo import MongoClient, GEO2D
+from django.core.files.base import ContentFile
+from django.core.files.storage import default_storage
 import os
 from time import time
 from bson.son import SON
@@ -38,9 +40,12 @@ def sneeze(request):
         col.create_index( [("loc", GEO2D)] )
 
         # p = BSON.encode({"picture": data["data"].read()})
-        name = uuid.uuid4(data["data"])
-        f = open(name, "rw+")
-        f.write(data["data"])
+        name = str(uuid.uuid4())
+        f = open(name, "w+")
+        print type(data["data"])
+        f.write(str(data["data"]))
+        path = default_storage.save(name, ContentFile(data["data"]))
+        tmp_file = os.path.join(settings.MEDIA_ROOT, path)
         f.close()
         post = {
             # is this the correct format for accessing attributes
@@ -48,7 +53,7 @@ def sneeze(request):
             # parsing
             "loc": [float(data["longitude"]), float(data["latitude"])],
             "format": data["format"],
-            "path": name, # https://docs.mongodb.com/manual/reference/bson-types/
+            "path": tmp_file, # https://docs.mongodb.com/manual/reference/bson-types/
             "user": data["user"],
             "radius": float(data["rad"]),
             "time": time(),
