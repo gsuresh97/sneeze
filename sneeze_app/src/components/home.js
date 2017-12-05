@@ -6,7 +6,8 @@ import Modal from 'react-native-modal';
 import Upload from './upload';
 import MemeView from './meme-view';
 import ReSneeze from './resneeze';
-
+import Gallery from './gallery';
+import Geolocation from './geolocation';
 export default class Home extends React.Component {
     state = {
         isModalVisible: false,
