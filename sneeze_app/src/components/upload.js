@@ -13,6 +13,7 @@ export default class Upload extends React.Component {
         this.state = {
             image: "",
         }
+    };
 
     send(){
         fetch("this.pollEndpoint",{
