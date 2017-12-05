@@ -125,7 +125,7 @@ export default class Home extends React.Component {
                   <MemeView img={this.state.receivedMeme} close={()=>{this._hideModal();this._hideMeme();this._hideReSneeze()}} open={()=>{this._hideMeme();this._showReSneeze();}} />
                 </Modal>
                 <Modal isVisible={this.state.isReSneezeVisible}>
-                  <ReSneeze img={this.state.receivedMeme} lat={this.state.receivedLat} lon={this.state.receivedLon} this.close={()=>{this._hideModal();this._hideMeme();this._hideReSneeze()}} />
+                  <ReSneeze img={this.state.receivedMeme} lat={this.state.receivedLat} lon={this.state.receivedLon} close={()=>{this._hideModal();this._hideMeme();this._hideReSneeze()}} />
                 </Modal>
             </View>
         );
