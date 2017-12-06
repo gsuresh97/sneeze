@@ -15,7 +15,7 @@ export default class MemeView extends React.Component {
                     <Image
                         style={{width: '100%', height: '100%'}}
                         resizeMode={'contain'}
-                        source={this.props.img}
+                        source={{uri: this.props.img}}
                     />
                 </View>
                 <View style={styles.title}>
@@ -38,7 +38,7 @@ export default class MemeView extends React.Component {
                             buttonStyle={{backgroundColor: '#27a800', borderRadius: 0}}
                             textStyle={{textAlign: 'center', fontSize:20, fontFamily:'Roboto', fontWeight:'bold'}}
                             title={`ReSneeze`}
-                            onPress={this.props.open}
+                            onPress={()=>{}}
                         />
                     </View>
                 </View>

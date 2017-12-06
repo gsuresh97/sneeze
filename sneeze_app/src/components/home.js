@@ -42,44 +42,48 @@ export default class Home extends React.Component {
     _hideReSneeze = () => this.setState({ isReSneezeVisible: false })
 
     pollServer(){
-        fetch(this.pollEndpoint,{
-            method: "POST",
-            headers: {
-                Accept: "application/json",
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify({
-                id: this.state.id,
-                latitude: this.state.latitude,
-                longitude: this.state.longitutde,
-            })
-          })
-        .then(response => response.json())
-        .then(responseJson => {
-          if(responseJson.newImage){
-              this.setState({
-                  receivedMeme: responseJson.data,
-                  receivedLat: responseJson.latitude,
-                  receivedLon: responseJson.longitutde
+      if(this.state){
+          fetch("http://192.168.43.166:8000/getMemes/",{
+              method: "POST",
+              headers: {
+                  Accept: "application/json",
+                  "Content-Type": "application/json"
+              },
+              body: JSON.stringify({
+                  id: this.state.id,
+                  latitude: 30,
+                  longitude: 40,
               })
-              this._showMeme();
-          }
-        });
+            })
+          .then(response => response.json())
+          .then(responseJson => {
+            if(responseJson.newImage){
+                clearTimeout(this.timeout);
+                this.setState({
+                    receivedMeme: "data:image/png;base64," + responseJson.data.trim(),
+                    receivedLat: responseJson.latitude,
+                    receivedLon: responseJson.longitutde
+                })
+                this._showMeme();
+            }
+          });
+        }
+        setTimeout(this.pollServer.bind(this), 1000);
     }
 
 
     componentDidMount(){
-        this.timeout = setTimeout(this.pollServer, 1000);
-    //     navigator.geolocation.getCurrentPosition(
-    //         (position) => {
-    //         this.setState({
-    //         latitude: position.coords.latitude,
-    //         longitude: position.coords.longitude,
-    //         error: null,});
-    // },
-    //     (error) => this.setState({ error: error.message }),
-    //     { enableHighAccuracy: true, timeout: 20000, maximumAge: 1000 },
-    // );
+        this.timeout = setTimeout(this.pollServer.bind(this), 1000);
+        navigator.geolocation.watchPosition(
+            (position) => {
+            this.setState({
+            latitude: position.coords.latitude,
+            longitude: position.coords.longitude,
+            error: null,});
+    },
+        (error) => this.setState({ error: error.message }),
+        { enableHighAccuracy: false, timeout: 25000, maximumAge: 30000 },
+    );
     }
 
     componentWillUnmount(){
@@ -91,16 +95,17 @@ export default class Home extends React.Component {
             <View style={{flex: 1, flexDirection: 'column'}}>
                 <MapView
                     style={styles.map}
+                    zoomEnabled={false}
                     scrollEnabled={false}
                     region={{
                         latitude: this.state.latitude,
                         longitude: this.state.longitude,
-                        latitudeDelta: 0.115,
-                        longitudeDelta: 0.0121,
+                        latitudeDelta: 0.025,
+                        longitudeDelta: 0.0031,
                     }}
                 >
                 <MapView.Marker coordinate={{latitude:this.state.latitude,longitude:this.state.longitude}}/>
-                <MapView.Circle radius={1000} center={{latitude:this.state.latitude,longitude:this.state.longitude}}/>
+                <MapView.Circle radius={250} fillColor={'rgba(63, 161, 191, 0.5)'} center={{latitude:this.state.latitude,longitude:this.state.longitude}}/>
                 </MapView>
                 <View style={styles.button}>
                     <Button

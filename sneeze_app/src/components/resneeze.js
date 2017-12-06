@@ -16,7 +16,7 @@ export default class ReSneeze extends React.Component {
                 id: this.props.id,
                 latitude: this.props.latitude,
                 longitude: this.props.longitutde,
-                data: this.image,
+                data: this.props.image,
             })
         })
     }
@@ -27,8 +27,8 @@ export default class ReSneeze extends React.Component {
                     style={styles.map}
                     scrollEnabled={false}
                     region={{
-                        latitude: this.props.lat,
-                        longitude: this.props.lon,
+                        latitude: this.props.latitude,
+                        longitude: this.props.longitude,
                         latitudeDelta: 0.115,
                         longitudeDelta: 0.0121,
                     }}

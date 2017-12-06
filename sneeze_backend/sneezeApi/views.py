@@ -47,6 +47,7 @@ def sneeze(request):
 
         path = default_storage.save(name, ContentFile(request.data['data']))
         tmp_file = os.path.join(settings.MEDIA_ROOT, path)
+        ids[name] = [request.data["user"]]
 
         post = {
             # is this the correct format for accessing attributes

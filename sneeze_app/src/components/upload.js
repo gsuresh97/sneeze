@@ -16,16 +16,18 @@ export default class Upload extends React.Component {
     };
 
     send(){
-        fetch("this.pollEndpoint",{
+        fetch("http://192.168.43.166:8000/sneeze/",{
             method: "POST",
             headers: {
                 Accept: "application/json",
                 "Content-Type": "application/json"
             },
             body: JSON.stringify({
-                id: this.props.id,
-                latitude: this.props.latitude,
-                longitude: this.props.longitutde,
+                radius: 10,
+                format: "png",
+                user: this.props.id,
+                latitude: 30,
+                longitude: 40,
                 data: this.state.image,
             })
           })
